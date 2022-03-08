@@ -17,7 +17,7 @@
 2. 创建自己的三方库，本质是从远端下载一个配置模板。
 
 ```ruby
-    pod lib create QAKitLibrary
+    pod lib create QSKitLibrary
 ```
 
 ![开始创建三方库](src/pod_lib_2.png)
@@ -26,8 +26,8 @@
 3. 完成创建之后会自动打开Xcode，主要包含的文件如下:
 ![完成创建三方库](src/pod_lib_4.png)
 
- - **QAKitLibrary.podspec**  整个库的配置文件，约定了最低版本，依赖等内容
- - **Example for QAKitLibrary** 上一步勾选自动生成的演示Demo
+ - **QSKitLibrary.podspec**  整个库的配置文件，约定了最低版本，依赖等内容
+ - **Example for QSKitLibrary** 上一步勾选自动生成的演示Demo
  - **Development Pods** 主要的代码托管目录，可编辑区域
 
  4. 编写代码
@@ -37,7 +37,7 @@
 
  5. 通过自带的demo测验上述代码
  - 先执行`pod install`编译新加入的代码
- - 再运行`QAKitLibrary`项目(截图重命名为QSKitLibrary)
+ - 再运行`QSKitLibrary`项目(之前截图手滑为QAKitLibrary)
 ![运行代码](src/pod_lib_5.png) 
  - 运行成功
 ![运行结果](src/pod_lib_6.png)
@@ -65,6 +65,10 @@
     # 将配置文件推送到公共仓库
     pod trunk push --verbose --allow-warnings
     ```
+     ![大功告成，发布成功](src/pod_lib_8.png) 
+    > 可以通过 pod search 'QSKitLibrary' 即可
+
+    
 
     b.发布到私有仓库
     // 之前写过总结懒得写了
